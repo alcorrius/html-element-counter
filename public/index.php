@@ -8,3 +8,5 @@
 
 require_once __DIR__ . '/../app/autoloader.php';
 
+$router = new core\Router();
+$router->route($_SERVER['REQUEST_URI']);
