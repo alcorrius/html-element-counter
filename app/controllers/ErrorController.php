@@ -9,7 +9,7 @@
 namespace controllers;
 
 
-class ErrorController
+class ErrorController extends BaseController
 {
     public function index() {
         echo "Page not found";

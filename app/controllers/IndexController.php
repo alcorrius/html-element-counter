@@ -9,9 +9,13 @@
 
 namespace controllers;
 
-class IndexController
+class IndexController extends BaseController
 {
     public function index() {
-        echo "index";
+        $this->setTitle('HTML Element Counter');
+        $this->setContent(array(
+
+        ));
+        $this->render('index');
     }
 }

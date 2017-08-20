@@ -1,0 +1,35 @@
+.outer {
+    display: table;
+    position: absolute;
+    height: 99%;
+    width: 99%;
+}
+
+.middle {
+    display: table-cell;
+    padding-top: 20vh;
+    /*vertical-align: middle;*/
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+input {
+    width: 200px;
+}
+
+#result div {
+    margin-top: 20px;
+}
+
+#statistic {
+    bottom: 10vh;
+    right: 10vh;
+    display: block;
+    position: fixed;
+    text-align: right;
+}

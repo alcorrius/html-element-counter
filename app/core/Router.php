@@ -22,8 +22,9 @@ class Router
 
         if(isset($url[0]) && !empty($url[0])) {
             $class = $this->namespacePath . ucfirst($url[0]) . 'Controller';
+            $reflectionClass = new \ReflectionClass($class);
 
-            if(class_exists($class)) {
+            if(class_exists($class) && $reflectionClass->IsInstantiable()) {
                 $object = new $class;
 
                 if(isset($url[1]) && !empty($url[1])) {
