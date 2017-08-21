@@ -8,7 +8,6 @@
 .middle {
     display: table-cell;
     padding-top: 20vh;
-    /*vertical-align: middle;*/
 }
 
 .inner {
@@ -27,9 +26,9 @@ input {
 }
 
 #statistic {
+    display: none;
     bottom: 10vh;
     right: 10vh;
-    display: block;
     position: fixed;
     text-align: right;
 }

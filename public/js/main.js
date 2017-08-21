@@ -29,6 +29,8 @@ function init(){
                     div.appendChild(elementDiv);
 
                     document.getElementById("result").appendChild(div);
+
+                    // $('#statistic').show();
                 },
                 error: function () {
                     console.log('counting error');

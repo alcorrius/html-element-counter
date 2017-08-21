@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
         apt-get update
 
         ###install php and nginx
-        apt-get install -y php5 php5-cli php5-fpm php5-mysql
+        apt-get install -y php5 php5-cli php5-fpm php5-mysql php5-curl
         apt-get install -y nginx
 
         ###configure nginx
