@@ -5,7 +5,8 @@ CREATE TABLE request (
   domain_id int(11) NOT NULL,
   url_id int(11) NOT NULL,
   element_id int(11) NOT NULL,
-  time varchar(25),
+  count int(11) NOT NULL,
+  time DATETIME,
   duration varchar(11),
   PRIMARY KEY (id)
 );
