@@ -1,6 +1,6 @@
 CREATE DATABASE counter;
 
-CREATE TABLE request (
+CREATE TABLE counter.request (
   id int(11) NOT NULL AUTO_INCREMENT,
   domain_id int(11) NOT NULL,
   url_id int(11) NOT NULL,
@@ -11,19 +11,19 @@ CREATE TABLE request (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE domain (
+CREATE TABLE counter.domain (
   id int(11) NOT NULL AUTO_INCREMENT,
   name varchar(255),
   PRIMARY KEY (id)
 );
 
-CREATE TABLE url (
+CREATE TABLE counter.url (
   id int(11) NOT NULL AUTO_INCREMENT,
   name varchar(255),
   PRIMARY KEY (id)
 );
 
-CREATE TABLE element (
+CREATE TABLE counter.element (
   id int(11) NOT NULL AUTO_INCREMENT,
   name varchar(255),
   PRIMARY KEY (id)
