@@ -29,7 +29,7 @@ class Router
 
                 if(isset($url[1]) && !empty($url[1])) {
                     if(method_exists($object, $url[1])) {
-                        $object->$url[1]();
+                        $object->{$url[1]}();
                     } else {
                         $this->pageNotFound();
                     }
