@@ -21,8 +21,3 @@
 
     </div>
 </div>
-<div id="statistic">
-    <div>General statistic:</div>
-    <div id="update-time">...loading</div>
-    <div>28 different URLs from colnect.com have been fetched</div>
-</div>

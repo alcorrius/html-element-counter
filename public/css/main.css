@@ -25,10 +25,3 @@ input {
     margin-top: 20px;
 }
 
-#statistic {
-    display: none;
-    bottom: 10vh;
-    right: 10vh;
-    position: fixed;
-    text-align: right;
-}
