@@ -48,7 +48,8 @@ class CounterController
 			if(!isset($lastRequest['time']) || (strtotime($lastRequest['time']) < strtotime("-5 minutes"))) {
 				$parser = new Parser();
 
-				if($parser->checkUrl($url_name)) {
+				$checkUrl = $parser->checkUrl($url_name);
+				if($checkUrl[0]) {
 					$response = $parser->getPageContent($url_name);
 
 					$dom = new \DOMDocument('1.0', 'UTF-8');
@@ -66,7 +67,7 @@ class CounterController
 
 					$this->request->addItem($domainID, $urlID, $elementID, $count, $date, $response_time);
 				} else {
-					echo json_encode(array('success' => false, 'message' => 'Wrong URL'));
+					echo json_encode(array('success' => false, 'message' => isset($checkUrl[1]) ? $checkUrl[1] : 'Wrong URL'));
 					die();
 				}
 			} else {

@@ -18,7 +18,7 @@ class Parser
         $options = array(
             CURLOPT_USERAGENT      => $this->userAgent, //set user agent
             CURLOPT_HEADER         => true,    // return headers
-            CURLOPT_NOBODY         => true,    // don't need body
+//            CURLOPT_NOBODY         => true,    // don't need body
             CURLOPT_RETURNTRANSFER => true,    //
             CURLOPT_CONNECTTIMEOUT => 60,     // timeout on connect
             CURLOPT_TIMEOUT        => 60,     // timeout on response
@@ -30,9 +30,10 @@ class Parser
 
         curl_exec($curlHandle);
         $response = curl_getinfo($curlHandle, CURLINFO_HTTP_CODE);
+		$errmsg  = curl_error( $curlHandle );
         curl_close($curlHandle);
 
-        return ($response >= 200 && $response < 400) ? true : false;
+        return ($response >= 200 && $response < 400) ? array(true, 'ok') : array(false, $errmsg);
     }
 
     function getPageContent($url)
