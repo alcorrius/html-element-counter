@@ -20,7 +20,8 @@ abstract class Base
 
     private function checkItem($name)
 	{
-		$s = $this->db->prepare("SELECT * FROM {$this->table} WHERE name= :name");
+		$sql = "SELECT * FROM {$this->table} WHERE name= :name";
+		$s = $this->db->prepare($sql);
 		$s->bindValue(':name', strval($name), \PDO::PARAM_STR);
 		$s->execute();
 		$row = $s->fetch();
