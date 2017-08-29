@@ -24,6 +24,8 @@ class CounterController
         $url_name = isset($_GET['url']) ? $_GET['url'] : null;
         $element_name = isset($_GET['element']) ? $_GET['element'] : null;
 
+		$element_name = preg_replace('/[^A-Za-z0-9\-]/', '', $element_name);
+
         if($url_name && $element_name) {
 			$parsed_url = parse_url($url_name);
 			if (empty($parsed_url['scheme'])) {
